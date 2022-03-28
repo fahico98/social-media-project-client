@@ -1,0 +1,59 @@
+
+.share {
+    @apply
+    w-full
+    rounded-md
+    bg-elem-main
+    shadow
+}
+
+.share-wrapper {
+    @apply
+    p-3
+}
+
+.share-header {
+    @apply
+    flex
+    flex-row
+}
+
+.share-header-profile-picture {
+    @apply
+    w-14
+    h-14
+    rounded-full
+    object-cover
+    border-2
+    border-elem-tertiary
+}
+
+.share-header-textarea {
+    @apply
+    w-full
+    resize-none
+    text-sm
+}
+
+.share-action-icon-wrapper {
+    @apply
+    bg-custom-yellow-500
+    hover:bg-custom-yellow-600
+    transition-colors
+    duration-[300ms]
+    rounded-full
+    w-8
+    h-8
+    flex
+    justify-center
+    items-center
+    cursor-pointer
+    mr-1
+}
+
+.share-action-icon {
+    @apply
+    text-elem-headline
+    w-5
+    h-5
+}

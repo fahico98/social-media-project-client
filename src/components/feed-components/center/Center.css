@@ -1,0 +1,7 @@
+
+.center {
+    @apply basis-7/12 bg-elem-secondary z-1;
+    height: calc(100vh - 4rem);
+}
+
+.center-wrapper { @apply p-3 mx-20 }

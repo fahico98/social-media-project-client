@@ -1,0 +1,92 @@
+
+.login {
+    @apply
+    w-full
+    h-[calc(100vh-4rem)]
+    relative
+}
+
+.login-wave {
+    @apply
+    bg-elem-secondary
+    object-cover
+    absolute
+    w-full
+    h-full
+    z-[-1]
+}
+
+.login-container {
+    @apply
+    h-full
+    flex
+    items-center
+    justify-center
+}
+
+.login-flex {
+    @apply
+    w-full
+    flex
+    items-center
+}
+
+.login-form-card {
+    @apply
+    w-1/2
+    border
+    border-elem-muted
+    bg-elem-main
+    rounded-md
+    shadow-md
+    flex
+    p-8
+    ml-32
+}
+
+.login-form {
+    @apply
+    w-full
+    flex
+    flex-col
+}
+
+.login-img {
+    @apply
+    w-1/2
+}
+
+.login-form-label {
+    @apply
+    block
+    text-base
+    text-elem-paragraph
+    font-bold
+    font-sans
+    mb-1
+}
+
+.login-form-input-wrapper {
+    @apply
+    w-full
+    mb-8
+}
+
+.login-form-title {
+    @apply
+    text-elem-paragraph
+    font-mono
+    font-bold
+    text-3xl
+    leading-6
+    mb-8
+}
+
+.login-form-description {
+    @apply
+    font-sans
+    font-normal
+    text-lg
+    text-elem-paragraph
+    leading-6
+}

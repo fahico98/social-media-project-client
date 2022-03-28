@@ -1,0 +1,50 @@
+
+.post {
+    @apply
+    w-full
+    rounded-md
+    bg-elem-main
+    shadow
+    mt-3
+}
+
+/* .post-wrapper {
+    @apply
+    p-3
+} */
+
+.post-header {
+    @apply
+    p-3
+}
+
+.post-owner-name-text {
+    @apply
+    text-base
+    font-semibold
+    font-mono
+    text-elem-headline
+}
+
+.post-datetime-text {
+    @apply
+    text-xs
+    font-normal
+    text-elem-paragraph
+    font-sans
+}
+
+.post-image-wrapper {
+    @apply
+    bg-gray-600
+}
+
+.post-image {
+    @apply
+    object-contain
+}
+
+.post-footer {
+    @apply
+    p-3
+}

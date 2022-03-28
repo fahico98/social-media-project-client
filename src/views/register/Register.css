@@ -1,0 +1,77 @@
+
+.register {
+    @apply
+    w-full
+    relative
+}
+
+.register-wave {
+    @apply
+    bg-elem-secondary
+    object-cover
+    absolute
+    w-full
+    h-full
+    z-[-1]
+}
+
+.register-container {
+    @apply
+    h-full
+    flex
+    items-center
+    justify-center
+}
+
+.register-flex {
+    @apply
+    w-full
+    flex
+    justify-center
+    items-center
+    my-24
+}
+
+.register-form-card {
+    @apply
+    w-2/3
+    rounded-md
+    shadow-md
+    border
+    border-elem-muted
+    bg-elem-main
+    p-8
+}
+
+.register-form {
+    @apply
+    grid
+    grid-cols-2
+    gap-x-3
+    gap-y-8
+}
+
+.register-form-input-wrapper {
+    @apply
+    w-full
+}
+
+.register-form-title {
+    @apply
+    text-elem-paragraph
+    font-mono
+    font-bold
+    text-3xl
+    leading-6
+    mb-8
+}
+
+.register-form-label {
+    @apply
+    block
+    text-base
+    text-elem-paragraph
+    font-bold
+    font-sans
+    mb-1
+}

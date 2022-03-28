@@ -1,0 +1,69 @@
+
+.left {
+    @apply
+    basis-2/12
+    bg-elem-secondary
+    overflow-y-scroll
+    h-[calc(100vh-4rem)]
+    z-[1]
+}
+
+.left-wrapper {
+    @apply
+    p-3
+}
+
+.left-list {
+    @apply
+    list-none
+}
+
+.left-list-item {
+    @apply
+    flex
+    items-center
+    justify-start
+    w-full
+    bg-transparent
+    mb-1
+    p-2
+    rounded-md
+    border-3
+    border-transparent
+    hover:bg-custom-yellow-500
+    hover:border-elem-headline
+    transition
+    duration-[200ms]
+    cursor-pointer
+}
+
+.left-list-item-icon {
+    @apply
+    text-elem-headline
+    mr-2
+    w-[1.5rem]
+    h-[1.5rem]
+}
+
+.left-list-item-text {
+    @apply
+    text-elem-headline
+    font-mono
+    font-medium
+    text-lg
+}
+
+/* ::-webkit-scrollbar {
+    @apply
+    w-[8px]
+}
+
+::-webkit-scrollbar-track {
+    @apply
+    bg-elem-secondary
+}
+
+::-webkit-scrollbar-thumb {
+    @apply
+    bg-elem-muted
+} */

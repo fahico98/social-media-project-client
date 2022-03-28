@@ -14,12 +14,12 @@ insert_final_newline = true
 charset = utf-8
 
 # 2 space indentation for javascript
-[*.{js,ts,jsx,vue,json,html}]
+[*.{js,ts,jsx,vue,json}]
 indent_style = space
 indent_size = 2
 
 # 4 space indentation for php and html
-[*.{php,blade.php,css,scss,less}]
+[*.{php,blade.php,css,scss,less,html}]
 indent_style = space
 indent_size = 4
 

@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* Light buttons */
+
+    .btn-light-gray { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-gray-600 bg-gray-50 hover:text-gray-800 hover:bg-gray-100 active:bg-gray-200 focus:ring-gray-300 }
+
+    .btn-light-purple { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-purple-600 bg-purple-50 hover:text-purple-800 hover:bg-purple-100 active:bg-purple-200 focus:ring-purple-300 }
+
+    .btn-light-blue { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-blue-600 bg-blue-50 hover:text-blue-800 hover:bg-blue-100 active:bg-blue-200 focus:ring-blue-300 }
+
+    .btn-light-green { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-green-600 bg-green-50 hover:text-green-800 hover:bg-green-100 active:bg-green-200 focus:ring-green-300 }
+
+    .btn-light-yellow { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-yellow-600 bg-yellow-50 hover:text-yellow-800 hover:bg-yellow-100 active:bg-yellow-200 focus:ring-yellow-300 }
+
+    .btn-light-red { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-red-600 bg-red-50 hover:text-red-800 hover:bg-red-100 active:bg-red-200 focus:ring-red-300 }
+
+    /* Normal buttons */
+
+    .btn-gray { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-gray-500 hover:bg-gray-600 active:bg-gray-700 focus:ring-gray-300 }
+
+    .btn-purple { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-purple-500 hover:bg-purple-600 active:bg-purple-700 focus:ring-purple-300 }
+
+    .btn-blue { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:ring-blue-300 }
+
+    .btn-green { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-green-500 hover:bg-green-600 active:bg-green-700 focus:ring-green-300 }
+
+    .btn-yellow { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 focus:ring-yellow-300 }
+
+    .btn-red { @apply px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-red-500 hover:bg-red-600 active:bg-red-700 focus:ring-red-300 }
+
+    /* Custom colors button */
+
+    .btn-yellow-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
+
+    .btn-yellow-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
+
+    .btn-yellow-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
+
+
+    .btn-dark-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
+
+    .btn-dark-blue-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
+
+    .btn-dark-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
+
+
+    .btn-light-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+
+    .btn-light-blue-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+
+    .btn-light-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+
+    /* Outline buttons */
+
+    .btn-outline-gray { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-gray-600 border-gray-600 hover:text-white hover:bg-gray-600 active:bg-gray-700 focus:ring-gray-300 }
+
+    .btn-outline-purple { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-purple-600 border-purple-600 hover:text-white hover:bg-purple-600 active:bg-purple-700 focus:ring-purple-300 }
+
+    .btn-outline-blue { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-blue-600 border-blue-600 hover:text-white hover:bg-blue-600 active:bg-blue-700 focus:ring-blue-300 }
+
+    .btn-outline-green { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-green-600 border-green-600 hover:text-white hover:bg-green-600 active:bg-green-700 focus:ring-green-300 }
+
+    .btn-outline-yellow { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-yellow-600 border-yellow-600 hover:text-white hover:bg-yellow-600 active:bg-yellow-700 focus:ring-yellow-300 }
+
+    .btn-outline-red { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-red-600 border-red-600 hover:text-white hover:bg-red-600 active:bg-red-700 focus:ring-red-300 }
+
+    /* Custom colors button */
+    .btn-outline-elem-button { @apply px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring text-elem-headline border-elem-button-500 hover:bg-elem-button-600 active:bg-elem-button-600 focus:ring-elem-button-300 focus:bg-elem-button-500 transition duration-[300ms] }
+
+    /*
+
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-gray-600 bg-gray-50 border-gray-200 hover:bg-gray-100 active:bg-gray-200 focus:ring-gray-300
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-purple-600 bg-purple-50 border-purple-200 hover:bg-purple-100 active:bg-purple-200 focus:ring-purple-300
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100 active:bg-blue-200 focus:ring-blue-300
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-green-600 bg-green-50 border-green-200 hover:bg-green-100 active:bg-green-200 focus:ring-green-300
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-yellow-600 bg-yellow-50 border-yellow-200 hover:bg-yellow-100 active:bg-yellow-200 focus:ring-yellow-300
+    px-4 py-2 rounded-md text-sm font-medium border shadow focus:outline-none focus:ring transition text-red-600 bg-red-50 border-red-200 hover:bg-red-100 active:bg-red-200 focus:ring-red-300
+
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-gray-600 hover:bg-gray-50 active:bg-gray-100 focus:ring-gray-300
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-purple-600 hover:bg-purple-50 active:bg-purple-100 focus:ring-purple-300
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-blue-600 hover:bg-blue-50 active:bg-blue-100 focus:ring-blue-300
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-green-600 hover:bg-green-50 active:bg-green-100 focus:ring-green-300
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-yellow-600 hover:bg-yellow-50 active:bg-yellow-100 focus:ring-yellow-300
+    px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring transition text-red-600 hover:bg-red-50 active:bg-red-100 focus:ring-red-300
+
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-gray-500 border-gray-800 hover:bg-gray-600 active:bg-gray-700 focus:ring-gray-300
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-purple-500 border-purple-800 hover:bg-purple-600 active:bg-purple-700 focus:ring-purple-300
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-blue-500 border-blue-800 hover:bg-blue-600 active:bg-blue-700 focus:ring-blue-300
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-green-500 border-green-800 hover:bg-green-600 active:bg-green-700 focus:ring-green-300
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-yellow-500 border-yellow-800 hover:bg-yellow-600 active:bg-yellow-700 focus:ring-yellow-300
+    px-4 py-2 rounded-md text-sm font-medium border-b-2 focus:outline-none focus:ring transition text-white bg-red-500 border-red-800 hover:bg-red-600 active:bg-red-700 focus:ring-red-300
+
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-gray-300 focus:ring-gray-200
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-purple-300 focus:ring-purple-200
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-blue-300 focus:ring-blue-200
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-green-300 focus:ring-green-200
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-yellow-300 focus:ring-yellow-200
+    <button disabled class="px-4 py-2 rounded-md cursor-default text-sm font-medium focus:outline-none focus:ring transition text-white bg-red-300 focus:ring-red-200
+
+    */
+
+}

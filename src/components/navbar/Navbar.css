@@ -1,0 +1,50 @@
+
+.navbar {
+    @apply
+    fixed
+    top-0
+    w-full
+    bg-elem-secondary
+    shadow-md
+    z-10
+    h-16
+}
+
+.navbar-container {
+    @apply
+    flex
+    items-center
+    h-full
+    mx-3
+}
+
+.navbar-icon-container {
+    @apply
+    relative
+}
+
+.navbar-icon {
+    @apply
+    text-elem-headline
+    cursor-pointer
+    w-6
+    h-6
+}
+
+.navbar-icon-badge {
+    @apply
+    absolute
+    bg-custom-yellow-500
+    text-elem-headline
+    font-sans
+    font-semibold
+    rounded-full
+    flex
+    justify-center
+    items-center
+    w-[1.1rem]
+    h-[1.1rem]
+    top-[-0.4rem]
+    right-[-0.4rem]
+    text-[0.7rem]
+}

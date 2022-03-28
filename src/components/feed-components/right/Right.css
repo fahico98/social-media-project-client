@@ -1,0 +1,5 @@
+
+.right {
+    @apply basis-3/12;
+    height: calc(100vh - 4rem);
+}
