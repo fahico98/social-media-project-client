@@ -3,7 +3,7 @@ import "./Post.css"
 
 const Post = () => {
   return (
-    <div className="post">
+    <div className="post contour-card">
       <div className="post-wrapper">
 
         <div className="post-header">

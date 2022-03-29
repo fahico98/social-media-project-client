@@ -1,5 +1,6 @@
 
 import Left from "../../components/feed-components/left/Left"
+import Right from "../../components/feed-components/right/Right"
 import { Outlet } from "react-router-dom"
 
 import "./Feed.css"
@@ -9,6 +10,7 @@ const Feed = () => {
     <div className="feed">
       <Left/>
       <Outlet/>
+      <Right/>
     </div>
   )
 }

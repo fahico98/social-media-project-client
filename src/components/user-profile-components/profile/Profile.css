@@ -1,12 +1,9 @@
 
-.center { @apply
+.profile { @apply
     basis-7/12
     bg-elem-secondary
     h-[calc(100vh-4rem)]
     z-1
 }
 
-.center-wrapper { @apply
-    mx-20
-    p-3
-}
+.profile-wrapper { @apply p-3 mx-20 }

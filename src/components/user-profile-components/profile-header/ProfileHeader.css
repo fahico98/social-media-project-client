@@ -1,0 +1,30 @@
+
+.profile-header { @apply
+    bg-elem-main
+    overflow-hidden
+    relative
+    w-full
+}
+
+.profile-header-cover-image { @apply
+    object-cover
+    w-full
+    h-[220px]
+}
+
+.profile-header-body { @apply
+    px-5
+    pb-5
+    pt-[calc(80px+1.25rem)]
+}
+
+.profile-header-picture { @apply
+    absolute
+    border-2
+    border-elem-tertiary
+    rounded-full
+    top-[140px]
+    left-[1.25rem]
+    h-[160px]
+    w-[160px]
+}

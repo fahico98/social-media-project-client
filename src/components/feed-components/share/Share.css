@@ -1,25 +1,13 @@
 
-.share {
-    @apply
-    w-full
-    rounded-md
+.share { @apply
     bg-elem-main
-    shadow
-}
-
-.share-wrapper {
-    @apply
+    flex
+    flex-row
+    w-full
     p-3
 }
 
-.share-header {
-    @apply
-    flex
-    flex-row
-}
-
-.share-header-profile-picture {
-    @apply
+.share-header-profile-picture { @apply
     w-14
     h-14
     rounded-full
@@ -28,17 +16,15 @@
     border-elem-tertiary
 }
 
-.share-header-textarea {
-    @apply
+.share-header-textarea { @apply
     w-full
     resize-none
     text-sm
 }
 
-.share-action-icon-wrapper {
-    @apply
+.share-action-icon-wrapper { @apply
     bg-custom-yellow-500
-    hover:bg-custom-yellow-600
+    hover:bg-custom-yellow-700
     transition-colors
     duration-[300ms]
     rounded-full
@@ -51,8 +37,7 @@
     mr-1
 }
 
-.share-action-icon {
-    @apply
+.share-action-icon { @apply
     text-elem-headline
     w-5
     h-5

@@ -2,9 +2,7 @@
 .post {
     @apply
     w-full
-    rounded-md
     bg-elem-main
-    shadow
     mt-3
 }
 

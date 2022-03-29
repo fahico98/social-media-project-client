@@ -21,4 +21,6 @@
 
     .margin-x { @apply lg:mx-20 md:mx-10 sm:mx-5 xs:mx-2 mx-1.5 }
     .max-width { @apply max-w-screen-xl }
+
+    .contour-card { @apply rounded-md shadow-md }
 }

@@ -35,25 +35,25 @@
 
     /* Custom colors button */
 
-    .btn-yellow-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
+    .btn-yellow-sm { @apply px-3 py-1.5 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
 
-    .btn-yellow-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
+    .btn-yellow-md { @apply px-3.5 py-2 rounded-md text-base font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
 
-    .btn-yellow-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
-
-
-    .btn-dark-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
-
-    .btn-dark-blue-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
-
-    .btn-dark-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
+    .btn-yellow-lg { @apply px-4 py-2.5 rounded-md text-lg font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-yellow-500 hover:bg-custom-yellow-700 active:bg-custom-yellow-900 focus:ring-custom-yellow-300 transition duration-[300ms] }
 
 
-    .btn-light-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+    .btn-dark-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
 
-    .btn-light-blue-md { @apply px-3.5 py-2 rounded-md text-base font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+    .btn-dark-blue-md { @apply px-3.5 py-2 rounded-md text-base font-medium border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
 
-    .btn-light-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-bold border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+    .btn-dark-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-medium border-0 focus:outline-none focus:ring text-custom-light-blue-500 bg-custom-dark-blue-500 hover:bg-custom-dark-blue-700 active:bg-custom-dark-blue-900 focus:ring-custom-dark-blue-300 transition duration-[300ms] }
+
+
+    .btn-light-blue-sm { @apply px-3 py-1.5 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+
+    .btn-light-blue-md { @apply px-3.5 py-2 rounded-md text-base font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
+
+    .btn-light-blue-lg { @apply px-4 py-2.5 rounded-md text-lg font-medium border-0 focus:outline-none focus:ring text-custom-dark-blue-500 bg-custom-light-blue-500 hover:bg-custom-light-blue-700 active:bg-custom-light-blue-900 focus:ring-custom-light-blue-300 transition duration-[300ms] }
 
     /* Outline buttons */
 
