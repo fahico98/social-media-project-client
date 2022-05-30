@@ -8,10 +8,6 @@
 }
 
 .share-header-profile-picture { @apply
-    w-14
-    h-14
-    rounded-full
-    object-cover
     border-2
     border-elem-tertiary
 }

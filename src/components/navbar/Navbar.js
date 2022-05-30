@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBell, faCommentDots, faUserCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 
-import "./Navbar.css";
+import "components/navbar/Navbar.css"
 
 const Navbar = () => {
   return (
@@ -11,7 +11,9 @@ const Navbar = () => {
       <div className="navbar-container">
 
         <div className="basis-1/3 flex justify-start">
-          <p className="text-custom-dark-blue-500 text-base font-medium font-mono cursor-pointer">Social<span className="text-custom-dark-blue-500 font-bold font-sans underline decoration-custom-yellow-500 text-3xl">Media</span></p>
+          <Link to="/">
+            <p className="text-custom-dark-blue-500 text-base font-medium font-mono cursor-pointer">Social<span className="text-custom-dark-blue-500 font-bold font-sans underline decoration-custom-yellow-500 text-3xl">Media</span></p>
+          </Link>
         </div>
 
         <div className="basis-1/3 flex justify-center">
@@ -37,8 +39,8 @@ const Navbar = () => {
             <div className="navbar-icon-badge">+9</div>
           </div>
 
-          <Link to="/login" className="mx-3">Login</Link>
-          <Link to="/register" className="mr-3">Register</Link>
+          <Link to="/sign-in" className="mx-3">Sign in</Link>
+          <Link to="/sign-up" className="mr-3">Sign up</Link>
           <Link to="/profile/fahico98">Profile</Link>
 
         </div>

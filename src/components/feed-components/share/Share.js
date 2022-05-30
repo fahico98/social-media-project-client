@@ -7,8 +7,10 @@ import "./Share.css";
 const Share = () => {
   return (
     <div className="share contour-card">
-      <img className="share-header-profile-picture" src="assets/profile-pictures/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg" alt="Profile pictures"/>
-      <div className="w-full ml-3">
+
+      <img className="share-header-profile-picture rounded-profile-picture-sm" src="assets/profile-pictures/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg" alt="Profile pictures"/>
+
+      <div className="ml-3 grow">
         <textarea className="share-header-textarea own-input" rows="3" placeholder="What are you thinking ?"></textarea>
         <div className="flex justify-between items-center mt-1">
 

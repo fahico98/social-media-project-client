@@ -23,4 +23,8 @@
     .max-width { @apply max-w-screen-xl }
 
     .contour-card { @apply rounded-md shadow-md }
+
+    .rounded-profile-picture-sm { @apply box-border rounded-full w-[56px] h-[56px] }
+    /* .round-profile-picture-lg { @apply box-border rounded-full h-[] w-[] } */
+    .rounded-profile-picture-xl { @apply box-border rounded-full h-[160px] w-[160px] }
 }

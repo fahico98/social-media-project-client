@@ -13,18 +13,63 @@
 }
 
 .profile-header-body { @apply
+    pt-[calc(80px+1.25rem)]
     px-5
     pb-5
-    pt-[calc(80px+1.25rem)]
 }
 
 .profile-header-picture { @apply
     absolute
-    border-2
-    border-elem-tertiary
-    rounded-full
+    border-3
+    border-elem-main
     top-[140px]
     left-[1.25rem]
-    h-[160px]
-    w-[160px]
+}
+
+.profile-header-name { @apply
+    text-custom-dark-blue-500
+    text-xl
+    font-mono
+    font-bold
+    leading-5
+    mb-1
+}
+
+.profile-header-username { @apply
+    text-custom-dark-blue-100
+    text-base
+    font-sans
+    font-medium
+    leading-4
+    mb-4
+}
+
+.profile-header-bio { @apply
+    text-custom-dark-blue-500
+    text-sm
+    font-sans
+    font-normal
+    leading-4
+    mb-4
+}
+
+.profile-header-info { @apply
+    text-custom-dark-blue-500
+    text-sm
+    font-mono
+    font-semibold
+    leading-3
+    h-5
+    w-5
+}
+
+.profile-header-info-paragraph { @apply
+    leading-4
+}
+
+.profile-header-icon { @apply
+    text-custom-dark-blue-100
+    w-4
+    h-4
+    mr-2.5
 }
