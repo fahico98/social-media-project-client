@@ -10,18 +10,16 @@ import App from "./App"
 
 axios.defaults.baseURL = "http://127.0.0.1:8000/api"
 
-console.log("index !")
-
 store.dispatch(attempt(localStorage.getItem("token")))
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App/>
-      </Router>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
-)
-
+  .then(() => {
+    ReactDOM.render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <Router>
+            <App/>
+          </Router>
+        </Provider>
+      </React.StrictMode>,
+      document.getElementById("root")
+    )
+  })

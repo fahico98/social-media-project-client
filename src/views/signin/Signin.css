@@ -1,12 +1,12 @@
 
-.login {
+.signin {
     @apply
     w-full
     h-[calc(100vh-4rem)]
     relative
 }
 
-.login-wave {
+.signin-wave {
     @apply
     bg-elem-secondary
     object-cover
@@ -20,7 +20,7 @@
     background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px; */
 }
 
-.login-container {
+.signin-container {
     @apply
     h-full
     flex
@@ -28,14 +28,14 @@
     justify-center
 }
 
-.login-flex {
+.signin-flex {
     @apply
     w-full
     flex
     items-center
 }
 
-.login-form-card {
+.signin-form-card {
     @apply
     w-1/2
     border
@@ -48,19 +48,19 @@
     ml-32
 }
 
-.login-form {
+.signin-form {
     @apply
     w-full
     flex
     flex-col
 }
 
-.login-img {
+.signin-img {
     @apply
     w-1/2
 }
 
-.login-form-label {
+.signin-form-label {
     @apply
     block
     text-base
@@ -70,13 +70,13 @@
     mb-1
 }
 
-.login-form-input-wrapper {
+.signin-form-input-wrapper {
     @apply
     w-full
     mb-8
 }
 
-.login-form-title {
+.signin-form-title {
     @apply
     text-elem-paragraph
     font-mono
@@ -86,7 +86,7 @@
     mb-8
 }
 
-.login-form-description {
+.signin-form-description {
     @apply
     font-sans
     font-normal

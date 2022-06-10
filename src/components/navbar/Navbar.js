@@ -1,11 +1,16 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBell, faCommentDots, faUserCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { connect } from "react-redux"
+import { selectAuthenticated, selectUser } from "store/selectors/auth"
 
 import "components/navbar/Navbar.css"
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  let navigate = useNavigate()
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -24,29 +29,45 @@ const Navbar = () => {
         </div>
 
         <div className="basis-1/3 flex justify-end">
+          {
+            props.authenticated
+              ?
+              <div className="flex justify-end">
 
-          <div className="navbar-icon-container mr-3.5">
-            <FontAwesomeIcon icon={faUserCircle} className="navbar-icon"/>
-          </div>
+                <div className="navbar-icon-container mr-3.5">
+                  <FontAwesomeIcon icon={faCommentDots} className="navbar-icon"/>
+                  <div className="navbar-icon-badge">+9</div>
+                </div>
 
-          <div className="navbar-icon-container mr-3.5">
-            <FontAwesomeIcon icon={faCommentDots} className="navbar-icon"/>
-            <div className="navbar-icon-badge">+9</div>
-          </div>
+                <div className="navbar-icon-container mr-3.5">
+                  <FontAwesomeIcon icon={faBell} className="navbar-icon"/>
+                  <div className="navbar-icon-badge">+9</div>
+                </div>
 
-          <div className="navbar-icon-container mr-2">
-            <FontAwesomeIcon icon={faBell} className="navbar-icon"/>
-            <div className="navbar-icon-badge">+9</div>
-          </div>
+                <div className="navbar-icon-container mr-0" onClick={() => navigate(`/${props.user.username}`)}>
+                  <FontAwesomeIcon icon={faUserCircle} className="navbar-icon"/>
+                </div>
 
-          <Link to="/sign-in" className="mx-3">Sign in</Link>
-          <Link to="/sign-up" className="mr-3">Sign up</Link>
-          <Link to="/profile/fahico98">Profile</Link>
-
+              </div>
+              :
+              <div>
+                <Link to="/sign-in" className="mr-6">Sign in</Link>
+                <Link to="/sign-up">Sign up</Link>
+                {/* <Link to="/fahico98">Profile</Link> */}
+              </div>
+          }
         </div>
+
       </div>
     </nav>
   )
 }
 
-export default Navbar
+const mapStateToProps = state => {
+  return {
+    user: selectUser(state),
+    authenticated: selectAuthenticated(state)
+  }
+}
+
+export default connect(mapStateToProps)(Navbar)

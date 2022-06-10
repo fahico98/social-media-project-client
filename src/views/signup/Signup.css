@@ -1,11 +1,12 @@
 
-.register {
+.signup {
     @apply
     w-full
+    h-[calc(100vh-4rem)]
     relative
 }
 
-.register-wave {
+.signup-wave {
     @apply
     bg-elem-secondary
     object-cover
@@ -19,7 +20,7 @@
     background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px; */
 }
 
-.register-container {
+.signup-container {
     @apply
     h-full
     flex
@@ -27,7 +28,7 @@
     justify-center
 }
 
-.register-flex {
+.signup-flex {
     @apply
     w-full
     flex
@@ -36,7 +37,7 @@
     my-24
 }
 
-.register-form-card {
+.signup-form-card {
     @apply
     w-2/3
     rounded-md
@@ -47,7 +48,7 @@
     p-8
 }
 
-.register-form {
+.signup-form {
     @apply
     grid
     grid-cols-2
@@ -55,12 +56,12 @@
     gap-y-8
 }
 
-.register-form-input-wrapper {
+.signup-form-input-wrapper {
     @apply
     w-full
 }
 
-.register-form-title {
+.signup-form-title {
     @apply
     text-elem-paragraph
     font-mono
@@ -70,7 +71,7 @@
     mb-8
 }
 
-.register-form-label {
+.signup-form-label {
     @apply
     block
     text-base

@@ -1,14 +1,17 @@
 
 import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
 import React, { useState } from "react"
 import { actionCreators } from "store"
-import axios from "axios"
+
+import { connect } from "react-redux"
+import { selectAuthenticated, selectToken, selectUser } from "store/selectors/auth"
 
 import "views/signin/Signin.css"
 
 import * as validator from "util/validator"
 
-const Signin = () => {
+const Signin = (props) => {
 
   const [emailUsername, setEmailUsername] = useState("")
   const [password, setPassword] = useState("")
@@ -17,8 +20,7 @@ const Signin = () => {
   const [validatedForm, setValidatedForm] = useState(true)
   const [loading, setLoading] = useState(false)
 
-  const { token } = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   let handleChange = (event) => {
 
@@ -43,12 +45,12 @@ const Signin = () => {
 
     setLoading(true)
 
-    let response = await dispatch(actionCreators.signIn({ "email_username": emailUsername, "password": password }))
-    if(response.status === 200){
-      await dispatch(actionCreators.attempt(response.data.token))
-    }
+    let response = await props.signIn(emailUsername, password)
 
-    setLoading(false)
+    if(response.status === 200){
+      let bufferUsername = await props.attempt(response.data.token)
+      navigate(`/${bufferUsername}`)
+    }
   }
 
   let validateForm = () => {
@@ -91,38 +93,38 @@ const Signin = () => {
   }
 
   return (
-    <div className="login">
+    <div className="signin">
 
-      <img src="./assets/login-wave.svg" alt="Login wave" className="login-wave"/>
+      <img src="./assets/signin-wave.svg" alt="Signin wave" className="signin-wave"/>
 
-      <div className="login-container margin-x">
-        <div className="login-flex max-width">
+      <div className="signin-container margin-x">
+        <div className="signin-flex max-width">
 
-          <img src="./assets/undraw/undraw_two_factor_authentication_namy.svg" alt="Login image" className="login-img"/>
+          <img src="./assets/undraw/undraw_two_factor_authentication_namy.svg" alt="Signin image" className="signin-img"/>
 
-          <div className="login-form-card">
-            <form className="login-form" onSubmit={handleSubmit}>
+          <div className="signin-form-card">
+            <form className="signin-form" onSubmit={handleSubmit}>
 
-              <div className="login-form-input-wrapper">
-                <p className="login-form-title">Sing in</p>
-                <p className="login-form-description">Input your data to access your account, please avoid sharing your access data with anyone else.</p>
+              <div className="signin-form-input-wrapper">
+                <p className="signin-form-title">Sing in</p>
+                <p className="signin-form-description">Input your data to access your account, please avoid sharing your access data with anyone else.</p>
               </div>
 
-              <div className="login-form-input-wrapper">
-                <label htmlFor="email-username" className="login-form-label">Emial or username</label>
+              <div className="signin-form-input-wrapper">
+                <label htmlFor="email-username" className="signin-form-label">Emial or username</label>
                 <input value={emailUsername} onChange={handleChange} id="email-username" type="text" className="own-input w-full" placeholder="Email or username"/>
               </div>
 
-              <div className="login-form-input-wrapper">
-                <label htmlFor="password" className="login-form-label">Password</label>
+              <div className="signin-form-input-wrapper">
+                <label htmlFor="password" className="signin-form-label">Password</label>
                 <input value={password} onChange={handleChange} id="password" type="password" className="own-input w-full" placeholder="Password"/>
               </div>
 
-              <div className="login-form-input-wrapper">
+              <div className="signin-form-input-wrapper">
                 <a href="#" className="custom-link-base">Forgot your password ?</a>
               </div>
 
-              <div className="login-form-input-wrapper mb-0">
+              <div className="signin-form-input-wrapper mb-0">
                 <button type="submit" className="btn-yellow-md">Send</button>
               </div>
 
@@ -136,14 +138,24 @@ const Signin = () => {
   )
 }
 
-// const mapStateToProps = (state) => {
-//   return { token: state.auth.token }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
 
-// const mapDispatchToProps = (dispatch) => {
-//   return bindActionCreators(actionCreators, dispatch)
-// }
+    signIn: async (emailUsername, password) => {
+      return await dispatch(actionCreators.signIn({ "email_username": emailUsername, "password": password }))
+    },
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Signin)
+    attempt: async (token) => await dispatch(actionCreators.attempt(token))
+  }
+}
 
-export default Signin
+// Por el momento no se está utilizando el estado...
+const mapStateToProps = state => {
+  return {
+    user: selectUser(state),
+    token: selectToken(state),
+    authenticated: selectAuthenticated(state)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signin)

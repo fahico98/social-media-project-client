@@ -14,23 +14,19 @@ export const setToken = (token) => {
 }
 
 export const signIn = (credentials) => {
-  return async (dispatch) => {
-    return await axios.post("auth/signin", credentials)
-  }
+  return async () => await axios.post("auth/signin", credentials)
 }
 
 export const attempt = (token) => {
-
   return async (dispatch) => {
 
-    console.log("attempt !")
+    if (token) dispatch({ type: "SET_TOKEN", payload: token })
+    else return
 
-    dispatch({ type: "SET_TOKEN", payload: token })
-    if (!token) return
-
-    await axios.get("auth/me")
+    return await axios.get("auth/me")
       .then((response) => {
         dispatch({ type: "SET_USER", payload: response.data.user })
+        return response.data.user.username
       })
       .catch(() => {
         dispatch({ type: "SET_USER", payload: null })
