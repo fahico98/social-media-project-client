@@ -1,0 +1,73 @@
+
+.navbar-auth-menu {
+    @apply
+    flex
+    justify-end
+    relative
+}
+
+.navbar-auth-menu-content {
+    @apply
+    bg-elem-main
+    absolute
+    w-36
+    z-1
+    top-8
+    right-0
+}
+
+.navbar-icon-container {
+    @apply
+    relative
+}
+
+.navbar-icon {
+    @apply
+    text-elem-headline
+    cursor-pointer
+    w-6
+    h-6
+}
+
+.navbar-icon-badge {
+    @apply
+    absolute
+    bg-custom-yellow-500
+    text-elem-headline
+    font-sans
+    font-semibold
+    rounded-full
+    flex
+    justify-center
+    items-center
+    w-[1.1rem]
+    h-[1.1rem]
+    top-[-0.4rem]
+    right-[-0.4rem]
+    text-[0.7rem]
+}
+
+.navbar-auth-menu-link {
+    @apply
+    text-elem-headline
+    font-sans
+    font-medium
+    px-3
+}
+
+.navbar-auth-menu-wrapper-link {
+    @apply
+    w-full
+    cursor-pointer
+    border-l-elem-headline
+    hover:bg-elem-secondary
+    py-2
+}
+
+.navbar-auth-menu-links-wrapper {
+    @apply
+    w-full
+    flex
+    flex-col
+    py-2
+}

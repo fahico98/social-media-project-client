@@ -1,0 +1,19 @@
+
+.navbar {
+    @apply
+    fixed
+    top-0
+    w-full
+    bg-elem-secondary
+    shadow-md
+    z-10
+    h-16
+}
+
+.navbar-container {
+    @apply
+    flex
+    items-center
+    h-full
+    mx-6
+}

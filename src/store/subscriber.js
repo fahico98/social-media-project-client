@@ -10,6 +10,10 @@ export const subscribe = (store) => {
       axios.defaults.headers.common["Authorization"] = token ? `Bearer ${token}` : null
       if (token) localStorage.setItem("token", token)
       else localStorage.removeItem("token")
+      return
     }
+
+    axios.defaults.headers.common["Authorization"] = null
+    localStorage.removeItem("token")
   })
 }

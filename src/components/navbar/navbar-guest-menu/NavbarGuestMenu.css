@@ -1,0 +1,6 @@
+
+.navbar-link {
+    @apply
+    font-sans
+    font-medium
+}

@@ -64,12 +64,12 @@ export function minLength(value, n){
   return String(value).trim().length < n ? "Este campo no debe contener menos de " + String(n) + " caracteres." : null
 }
 
-export async function uniqueEmail(value){
-  let response = await axios.get(`user/email_exists/${value}`)
-  return response.data ? "Este dirección de correo electrónico pertenece a alguien mas." : null
-}
+// export async function uniqueEmail(value){
+//   let response = await axios.get(`user/email_exists/${value}`)
+//   return response.data ? "Este dirección de correo electrónico pertenece a alguien mas." : null
+// }
 
-export async function uniqueUsername(value){
-  let response = await axios.get(`user/username_exists/${value}`)
-  return response.data ? "Este nombre de usuario pertenece a alguien mas." : null
-}
+// export async function uniqueUsername(value){
+//   let response = await axios.get(`user/username_exists/${value}`)
+//   return response.data ? "Este nombre de usuario pertenece a alguien mas." : null
+// }

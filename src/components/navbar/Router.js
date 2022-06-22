@@ -9,12 +9,8 @@ import ProtectedRoute from "components/navbar/ProtectedRoute"
 
 import React from "react"
 import { Routes, Route, } from "react-router-dom"
-// import { useSelector } from "react-redux"
 
 const Router = () => {
-
-  // const state = useSelector((state) => state)
-
   return (
     <Routes>
 

@@ -17,6 +17,14 @@ export const signIn = (credentials) => {
   return async () => await axios.post("auth/signin", credentials)
 }
 
+export const signOut = () => {
+  return async (dispatch) => {
+    await axios.post("auth/signout")
+    dispatch({ type: "SET_USER", payload: null })
+    dispatch({ type: "SET_TOKEN", payload: null })
+  }
+}
+
 export const attempt = (token) => {
   return async (dispatch) => {
 

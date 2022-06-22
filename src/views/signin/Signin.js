@@ -150,7 +150,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // Por el momento no se está utilizando el estado...
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: selectUser(state),
     token: selectToken(state),

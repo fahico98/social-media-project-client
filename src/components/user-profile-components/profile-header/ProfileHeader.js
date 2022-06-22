@@ -1,33 +1,39 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLocationDot, faCakeCandles } from "@fortawesome/free-solid-svg-icons"
+import { selectAuthenticated, selectUser } from "store/selectors/auth"
+import { connect } from "react-redux"
 
 import "./ProfileHeader.css"
 
-const ProfileHeader = () => {
+const ProfileHeader = (props) => {
+
+  let profilePicture = props.user.images.filter((image) => image.image_type === "user profile picture")[0]
+  let coverPicture = props.user.images.filter((image) => image.image_type === "user cover picture")[0]
+
   return (
     <div className="profile-header contour-card">
 
-      <img className="profile-header-cover-image" src={`${process.env.PUBLIC_URL}/assets/cover-pictures/derek-thomson-TWoL-QCZubY-unsplash.jpg`} alt="Cover picture"/>
+      <img className="profile-header-cover-image" src={ coverPicture.url } alt="Cover picture"/>
 
-      <img className="rounded-profile-picture-xl profile-header-picture" src={`${process.env.PUBLIC_URL}/assets/profile-pictures/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg`} alt="Profile picture"/>
+      <img className="rounded-profile-picture-xl profile-header-picture" src={ profilePicture.url } alt="Profile picture"/>
 
       <div className="profile-header-body">
 
-        <p className="profile-header-name">Desirée Marrón Carmona</p>
+        <p className="profile-header-name">{ props.user.name }</p>
 
-        <p className="profile-header-username">@desiree177</p>
+        <p className="profile-header-username">@{ props.user.username }</p>
 
-        <p className="profile-header-bio">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+        <p className="profile-header-bio">{ props.user.biography }</p>
 
-        <p className="profile-header-info-paragraph mb-1">
+        <p className="profile-header-info-paragraph mb-1.5">
           <FontAwesomeIcon icon={faLocationDot} className="profile-header-icon"/>
-          <span className="profile-header-info">Madrid - España</span>
+          <span className="profile-header-info">{ props.user.location }</span>
         </p>
 
         <p className="profile-header-info-paragraph">
           <FontAwesomeIcon icon={faCakeCandles} className="profile-header-icon"/>
-          <span className="profile-header-info">21 de Abril</span>
+          <span className="profile-header-info">{ props.user.birthday }</span>
         </p>
 
       </div>
@@ -36,4 +42,11 @@ const ProfileHeader = () => {
   )
 }
 
-export default ProfileHeader
+const mapStateToProps = (state) => {
+  return {
+    user: selectUser(state),
+    authenticated: selectAuthenticated(state)
+  }
+}
+
+export default connect(mapStateToProps)(ProfileHeader)

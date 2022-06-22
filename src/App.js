@@ -1,5 +1,5 @@
 
-import Navbar from "components/navbar/Navbar"
+import Navbar from "components/navbar/navbar/Navbar"
 import Router from "components/navbar/Router"
 
 import React from "react"
