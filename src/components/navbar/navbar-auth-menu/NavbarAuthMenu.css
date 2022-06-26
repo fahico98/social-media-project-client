@@ -10,7 +10,7 @@
     @apply
     bg-elem-main
     absolute
-    w-36
+    min-w-[9rem]
     z-1
     top-8
     right-0

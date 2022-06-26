@@ -16,7 +16,7 @@ const ProfileHeader = (props) => {
 
       <img className="profile-header-cover-image" src={ coverPicture.url } alt="Cover picture"/>
 
-      <img className="rounded-profile-picture-xl profile-header-picture" src={ profilePicture.url } alt="Profile picture"/>
+      <img className="rounded-profile-picture-xl profile-header-picture" src={ profilePicture.url } alt={ props.user.name }/>
 
       <div className="profile-header-body">
 

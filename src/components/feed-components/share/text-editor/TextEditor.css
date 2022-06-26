@@ -1,0 +1,39 @@
+
+.text-editor {
+    @apply
+    flex
+    justify-between
+    items-center
+}
+
+.text-editor-buttons-wrapper {
+    @apply
+    bg-elem-secondary
+    rounded-full
+    py-1
+    px-1
+    mt-2
+}
+
+.text-editor-button {
+    @apply
+    rounded-full
+    transition
+    duration-[300ms]
+    bg-elem-secondary
+    text-custom-dark-blue-500
+    w-8
+    h-8
+}
+
+.text-editor-button.is-active {
+    @apply
+    text-elem-secondary
+    bg-custom-dark-blue-500
+}
+
+.text-editor-icon {
+    @apply
+    w-4
+    h-4
+}

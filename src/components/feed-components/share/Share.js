@@ -1,40 +1,63 @@
 
+import StarterKit from "@tiptap/starter-kit"
+import Placeholder from "@tiptap/extension-placeholder"
+import { EditorContent, useEditor } from "@tiptap/react"
+import Underline from "@tiptap/extension-underline"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faImage, faVideo, faTag, faLocationDot, faFaceGrinBeam } from "@fortawesome/free-solid-svg-icons"
+import { faPhotoFilm, faAt, faLocationDot, faFaceGrinBeam, faFont } from "@fortawesome/free-solid-svg-icons"
+import TextEditor from "components/feed-components/share/text-editor/TextEditor"
+import { selectUser } from "store/selectors/auth"
+import { connect } from "react-redux"
 
-import "./Share.css";
+import "components/feed-components/share/Share.css"
 
-const Share = () => {
+const Share = (props) => {
+
+  let profilePicture = props.user.images.filter((image) => image.image_type === "user profile picture")[0]
+
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      Underline,
+      Placeholder.configure({ placeholder: "What are you thinking ?" })
+    ]
+  })
+
   return (
     <div className="share contour-card">
 
-      <img className="share-header-profile-picture rounded-profile-picture-sm" src="assets/profile-pictures/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg" alt="Profile pictures"/>
+      <img className="share-header-profile-picture rounded-profile-picture-sm" src={ profilePicture.url } alt={ props.user.name }/>
 
       <div className="ml-3 grow">
-        <textarea className="share-header-textarea own-input" rows="3" placeholder="What are you thinking ?"></textarea>
-        <div className="flex justify-between items-center mt-1">
+
+        <EditorContent editor={editor}/>
+        <TextEditor editor={editor}/>
+
+        {/* <textarea className="share-header-textarea own-input" rows="3" placeholder="What are you thinking ?"></textarea> */}
+
+        <div className="flex justify-between items-center mt-2">
 
           <div className="flex flex-row">
 
-            <div className="share-action-icon-wrapper" title="Picture">
-              <FontAwesomeIcon icon={faImage} className="share-action-icon"/>
-            </div>
+            <button className="share-action-icon-button" title="Picture">
+              <FontAwesomeIcon icon={faPhotoFilm} className="share-action-icon"/>
+            </button>
 
-            <div className="share-action-icon-wrapper" title="Video">
-              <FontAwesomeIcon icon={faVideo} className="share-action-icon"/>
-            </div>
+            <button className="share-action-icon-button" title="Tag">
+              <FontAwesomeIcon icon={faAt} className="share-action-icon"/>
+            </button>
 
-            <div className="share-action-icon-wrapper" title="Tag">
-              <FontAwesomeIcon icon={faTag} className="share-action-icon"/>
-            </div>
+            <button className="share-action-icon-button" title="Feeling">
+              <FontAwesomeIcon icon={faFont} className="share-action-icon"/>
+            </button>
 
-            <div className="share-action-icon-wrapper" title="Location">
+            <button className="share-action-icon-button" title="Location">
               <FontAwesomeIcon icon={faLocationDot} className="share-action-icon"/>
-            </div>
+            </button>
 
-            <div className="share-action-icon-wrapper" title="Feeling">
+            <button className="share-action-icon-button" title="Feeling">
               <FontAwesomeIcon icon={faFaceGrinBeam} className="share-action-icon"/>
-            </div>
+            </button>
 
           </div>
 
@@ -46,4 +69,8 @@ const Share = () => {
   )
 }
 
-export default Share;
+const mapStateToProps = (state) => {
+  return { user: selectUser(state) }
+}
+
+export default connect(mapStateToProps)(Share)

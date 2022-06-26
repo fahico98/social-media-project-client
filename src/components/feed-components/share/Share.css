@@ -1,5 +1,6 @@
 
-.share { @apply
+.share {
+    @apply
     bg-elem-main
     flex
     flex-row
@@ -7,21 +8,27 @@
     p-3
 }
 
-.share-header-profile-picture { @apply
+.share-header-profile-picture {
+    @apply
     border-2
     border-elem-tertiary
 }
 
-.share-header-textarea { @apply
+.share-header-textarea {
+    @apply
     w-full
     resize-none
     text-sm
 }
 
-.share-action-icon-wrapper { @apply
+.share-action-icon-button {
+    @apply
     bg-custom-yellow-500
     hover:bg-custom-yellow-700
-    transition-colors
+    focus:ring-custom-yellow-300
+    focus:outline-none
+    focus:ring
+    transition
     duration-[300ms]
     rounded-full
     w-8
@@ -30,11 +37,42 @@
     justify-center
     items-center
     cursor-pointer
-    mr-1
+    mr-2
 }
 
-.share-action-icon { @apply
+.share-action-icon {
+    @apply
     text-elem-headline
     w-5
     h-5
+}
+
+.ProseMirror {
+    @apply p-2 h-24 w-0 min-w-full rounded-md box-border border border-elem-headline focus:border-transparent outline-3 focus:outline outline-elem-headline text-elem-headline bg-white font-mono font-medium text-base overflow-y-auto
+}
+
+.ProseMirror p, span, i, em, b, strong, u, s {
+    @apply
+    break-words
+    font-mono
+    w-full
+    leading-5
+}
+
+/* .ProseMirror p.editor-empty {
+    @apply
+    text-red-500
+} */
+
+/* .ProseMirror p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+} */
+
+.ProseMirror p.is-editor-empty:first-child::before {
+    @apply float-left text-elem-muted text-base font-medium font-mono pointer-events-none h-0;
+    content: attr(data-placeholder);
 }
