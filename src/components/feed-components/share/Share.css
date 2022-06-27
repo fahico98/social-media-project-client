@@ -48,7 +48,7 @@
 }
 
 .ProseMirror {
-    @apply p-2 h-24 w-0 min-w-full rounded-md box-border border border-elem-headline focus:border-transparent outline-3 focus:outline outline-elem-headline text-elem-headline bg-white font-mono font-medium text-base overflow-y-auto
+    @apply p-2 h-24 w-0 min-w-full rounded-md box-border border border-elem-headline focus:border-transparent outline-3 focus:outline outline-elem-headline text-elem-headline bg-white font-mono font-medium text-sm overflow-y-auto
 }
 
 .ProseMirror p, span, i, em, b, strong, u, s {
@@ -73,6 +73,6 @@
 } */
 
 .ProseMirror p.is-editor-empty:first-child::before {
-    @apply float-left text-elem-muted text-base font-medium font-mono pointer-events-none h-0;
+    @apply float-left text-elem-muted text-sm font-medium font-mono pointer-events-none h-0;
     content: attr(data-placeholder);
 }

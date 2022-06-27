@@ -12,6 +12,12 @@
     h-[220px]
 }
 
+.profile-header-cover-element { @apply
+    bg-elem-tertiary
+    w-full
+    h-[220px]
+}
+
 .profile-header-body { @apply
     pt-[calc(80px+1.25rem)]
     px-5

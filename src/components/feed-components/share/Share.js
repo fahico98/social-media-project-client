@@ -15,6 +15,12 @@ const Share = (props) => {
 
   let profilePicture = props.user.images.filter((image) => image.image_type === "user profile picture")[0]
 
+  let profilePictureUrl = profilePicture
+    ? profilePicture.url
+    : props.user.gender === "male"
+      ? "assets/undraw/undraw_male_avatar_323b.svg"
+      : "assets/undraw/undraw_female_avatar_w3jk.svg"
+
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -26,7 +32,7 @@ const Share = (props) => {
   return (
     <div className="share contour-card">
 
-      <img className="share-header-profile-picture rounded-profile-picture-sm" src={ profilePicture.url } alt={ props.user.name }/>
+      <img className="share-header-profile-picture rounded-profile-picture-sm" src={ profilePictureUrl } alt={ props.user.name }/>
 
       <div className="ml-3 grow">
 

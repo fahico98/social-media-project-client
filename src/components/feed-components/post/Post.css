@@ -42,6 +42,20 @@
     object-contain
 }
 
+.post-content-wrapper {
+    @apply
+    px-3
+    pb-3
+}
+
+.post-content-text {
+    @apply
+    text-sm
+    font-mono
+    text-elem-headline
+    font-medium
+}
+
 .post-footer {
     @apply
     p-3

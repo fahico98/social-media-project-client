@@ -8,15 +8,25 @@ import "./ProfileHeader.css"
 
 const ProfileHeader = (props) => {
 
-  let profilePicture = props.user.images.filter((image) => image.image_type === "user profile picture")[0]
   let coverPicture = props.user.images.filter((image) => image.image_type === "user cover picture")[0]
+  let profilePicture = props.user.images.filter((image) => image.image_type === "user profile picture")[0]
+
+  let profilePictureUrl = profilePicture
+    ? profilePicture.url
+    : props.user.gender === "male"
+      ? "assets/undraw/undraw_male_avatar_323b.svg"
+      : "assets/undraw/undraw_female_avatar_w3jk.svg"
 
   return (
     <div className="profile-header contour-card">
 
-      <img className="profile-header-cover-image" src={ coverPicture.url } alt="Cover picture"/>
+      {
+        coverPicture
+          ? <img className="profile-header-cover-image" src={ coverPicture.url } alt="Cover picture"/>
+          : <div className="profile-header-cover-element"></div>
+      }
 
-      <img className="rounded-profile-picture-xl profile-header-picture" src={ profilePicture.url } alt={ props.user.name }/>
+      <img className="rounded-profile-picture-xl profile-header-picture" src={ profilePictureUrl } alt={ props.user.name }/>
 
       <div className="profile-header-body">
 
